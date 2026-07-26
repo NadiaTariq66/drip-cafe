@@ -38,7 +38,7 @@ export function AboutTeaser() {
         <div className="relative" data-reveal>
           <div className="zoom-img rounded-sm border border-cream/10">
             <img
-              src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?q=80&w=1400&auto=format&fit=crop"
+              src="https://images.deliveryhero.io/image/global-menu-service/FP_PK/vendor/gvi4/product/100952941/4d9fc8f5-2f3c-4bc5-b654-5aae4bdf3346.jpg?width=1400&height=1400"
               alt="Barista pouring latte art"
               className="w-full h-[62vh] object-cover"
               loading="lazy"
@@ -50,7 +50,7 @@ export function AboutTeaser() {
             data-delay="0.2"
           >
             <img
-              src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=800&auto=format&fit=crop"
+              src="https://images.deliveryhero.io/image/fd-pk/Products/98616881.jpg?width=800&height=800"
               alt="Latte"
               className="w-full h-56 md:h-72 object-cover"
               loading="lazy"

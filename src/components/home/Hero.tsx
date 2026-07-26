@@ -130,8 +130,8 @@ export function Hero({ playIntro }: Props) {
       <div className="absolute inset-0">
         <img
           id="hero-bg"
-          src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=2000&auto=format&fit=crop"
-          alt="DRIP Gulberg cafe interior"
+          src="https://images.deliveryhero.io/image/global-menu-service/FP_PK/vendor/gvi4/product/595c1fd6-995c-4765-b259-0662ea41c266.jpg?width=2000&height=1400"
+          alt="DRIP Pistachio Kunafa French Toast"
           className="w-full h-full object-cover scale-[1.18] will-change-transform"
         />
       </div>

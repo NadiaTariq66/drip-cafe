@@ -1,5 +1,7 @@
 import { useEffect } from 'react'
 import { GALLERY, SITE } from '../data/content'
+import { INSTAGRAM_FEED } from '../data/instagram'
+import { InstagramEmbed } from '../components/ui/InstagramEmbed'
 import { useReveal } from '../hooks/useReveal'
 
 export function Gallery() {
@@ -14,6 +16,9 @@ export function Gallery() {
     GALLERY.filter((_, i) => i % 3 === 2),
   ]
 
+  const reels = INSTAGRAM_FEED.filter((p) => p.type === 'reel')
+  const posts = INSTAGRAM_FEED.filter((p) => p.type === 'post').slice(0, 3)
+
   return (
     <div className="pt-36 pb-28">
       <div className="max-w-7xl mx-auto px-6 md:px-10">
@@ -23,8 +28,12 @@ export function Gallery() {
               <span className="eyebrow-line" /> GALLERY
             </p>
             <h1 className="font-serif text-6xl md:text-8xl text-cream" data-split>
-              Rooms of warm light
+              Real plates. Real pours.
             </h1>
+            <p className="mt-6 max-w-lg text-cream/50 leading-relaxed" data-reveal>
+              Dish photos from the live Foodpanda menu, plus posts and reels straight from{' '}
+              {SITE.instagramHandle}.
+            </p>
           </div>
           <a
             href={SITE.instagram}
@@ -37,7 +46,7 @@ export function Gallery() {
           </a>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-24">
           {cols.map((col, ci) => (
             <div
               key={ci}
@@ -61,6 +70,24 @@ export function Gallery() {
                   </span>
                 </div>
               ))}
+            </div>
+          ))}
+        </div>
+
+        <div className="mb-10" data-reveal>
+          <p className="flex items-center gap-4 text-[.62rem] tracking-[.5em] text-bronze mb-4">
+            <span className="eyebrow-line" /> REELS & POSTS
+          </p>
+          <h2 className="font-serif text-4xl md:text-5xl text-cream">Watch {SITE.instagramHandle}</h2>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {[...reels, ...posts].map((item) => (
+            <div key={item.id} data-reveal>
+              <p className="text-[.55rem] tracking-[.35em] text-bronze mb-3">
+                {item.type === 'reel' ? 'REEL' : 'POST'}
+              </p>
+              <InstagramEmbed permalink={item.permalink} caption={item.caption} />
             </div>
           ))}
         </div>

@@ -27,7 +27,7 @@ export function About() {
       <div className="max-w-7xl mx-auto px-6 md:px-10 mt-20 grid lg:grid-cols-2 gap-10">
         <div className="zoom-img rounded-sm border border-cream/10 h-[60vh]" data-reveal>
           <img
-            src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1400&auto=format&fit=crop"
+            src="https://images.deliveryhero.io/image/global-menu-service/FP_PK/vendor/gvi4/product/100894068/27fcb984-1f06-4a95-a69b-a953da90624f.jpg?width=1400&height=1400"
             alt="Coffee service"
             className="w-full h-full object-cover"
           />
@@ -37,7 +37,10 @@ export function About() {
           <ul className="space-y-5 text-cream/60 leading-relaxed">
             <li className="border-b border-cream/10 pb-5">
               <span className="text-bronzelight tracking-[.3em] text-[.6rem]">COFFEE</span>
-              <p className="mt-2">Spanish Latte, Tiramisu Latte, Cortado, Matcha, Mocha — poured daily.</p>
+              <p className="mt-2">
+                Spanish Latte, Tiramisu Latte, Cortado, Spanish Matcha, Mocha — the same drinks on
+                Foodpanda &amp; in-house.
+              </p>
             </li>
             <li className="border-b border-cream/10 pb-5">
               <span className="text-bronzelight tracking-[.3em] text-[.6rem]">BAKERY</span>

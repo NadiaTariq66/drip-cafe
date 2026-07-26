@@ -39,9 +39,19 @@ export function Menu() {
           Menu
         </h1>
         <p className="mt-6 max-w-xl text-cream/55 leading-relaxed" data-reveal>
-          Coffee, bakery and kitchen — from Spanish Latte to Hot Honey Croissant Sando. Rs 1,000–2,000
-          per person, depending how hungry the table gets.
+          Exact names, prices and photos from the live Foodpanda menu — Spanish Latte, Tiramisu Latte,
+          Pistachio Kunafa French Toast, Hot Honey Croissant Sandwich and more. Prices may vary by
+          branch.
         </p>
+        <a
+          href="https://www.foodpanda.pk/restaurant/jzig/drip-coffee-bakery-kitchen-adda-plot"
+          target="_blank"
+          rel="noreferrer"
+          className="link-lux inline-block mt-4 text-[.6rem] tracking-[.3em] text-bronzelight"
+          data-reveal
+        >
+          VIEW ON FOODPANDA
+        </a>
 
         <div className="mt-12 flex flex-wrap gap-3" data-reveal>
           {tabs.map((t) => (

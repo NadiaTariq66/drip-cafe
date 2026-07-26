@@ -261,7 +261,7 @@ export function Ritual() {
             <div className="relative" data-reveal data-delay="0.15">
               <div className="zoom-img rounded-sm border border-cream/10 sticky top-32">
                 <img
-                  src="https://images.unsplash.com/photo-1541167760496-1628856ab772?q=80&w=1200&auto=format&fit=crop"
+                  src="https://images.deliveryhero.io/image/global-menu-service/FP_PK/vendor/gvi4/product/100953170/bdf84150-ba76-4297-b616-952b124c5cd2.jpg?width=1200&height=1200"
                   alt="Spanish latte ritual"
                   className="w-full h-[70vh] object-cover"
                 />

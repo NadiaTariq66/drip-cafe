@@ -27,7 +27,7 @@ export function Footer() {
             </p>
             <p className="mt-6 text-cream/50 text-sm leading-relaxed max-w-sm">
               A house of slow rituals in Gulberg, Lahore. Roasted, baked and braised — never
-              hurried. {SITE.instagramHandle} · 18.4K+ on Instagram.
+              hurried. {SITE.instagramHandle} · 18.6K+ on Instagram.
             </p>
             <form onSubmit={onSubmit} className="mt-8 flex max-w-sm">
               <input

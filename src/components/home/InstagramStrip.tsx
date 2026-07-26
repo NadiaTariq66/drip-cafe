@@ -1,4 +1,6 @@
-import { SITE, INSTAGRAM_POSTS } from '../../data/content'
+import { SITE } from '../../data/content'
+import { INSTAGRAM_FEED } from '../../data/instagram'
+import { InstagramEmbed } from '../ui/InstagramEmbed'
 
 export function InstagramStrip() {
   return (
@@ -10,14 +12,17 @@ export function InstagramStrip() {
               <span className="eyebrow-line" /> FROM {SITE.instagramHandle.toUpperCase()}
             </p>
             <h2 className="font-serif text-5xl md:text-6xl text-cream" data-split>
-              Latest from the house
+              Live from Instagram
             </h2>
+            <p className="mt-4 max-w-md text-cream/50 text-sm leading-relaxed" data-reveal>
+              Real posts and reels from {SITE.instagramHandle} — embedded straight from Instagram.
+            </p>
           </div>
           <a
             href={SITE.instagram}
             target="_blank"
             rel="noreferrer"
-            className="btn-ghost magnetic mt-6 md:mt-0 inline-block px-8 py-4 text-[.6rem]"
+            className="btn-ghost magnetic mt-6 md:mt-0 inline-block px-8 py-4 text-[.62rem]"
             data-reveal
           >
             OPEN INSTAGRAM
@@ -25,27 +30,21 @@ export function InstagramStrip() {
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {INSTAGRAM_POSTS.map((post, i) => (
-            <a
-              key={post.id}
-              href={SITE.instagram}
-              target="_blank"
-              rel="noreferrer"
-              className="lux-card group bg-soot border border-cream/10 rounded-sm overflow-hidden"
-              data-reveal
-              data-delay={String(i * 0.08)}
-              data-hover
-            >
-              <div className="zoom-img h-64">
-                <img src={post.image} alt={post.caption} className="w-full h-full object-cover" loading="lazy" />
-              </div>
-              <div className="p-6">
-                <p className="text-[.55rem] tracking-[.35em] text-bronze mb-3">
-                  INSTAGRAM · {post.ago.toUpperCase()}
-                </p>
-                <p className="text-cream/70 text-sm leading-relaxed line-clamp-3">{post.caption}</p>
-              </div>
-            </a>
+          {INSTAGRAM_FEED.map((post, i) => (
+            <div key={post.id} data-reveal data-delay={String(i * 0.06)} data-hover>
+              <p className="text-[.55rem] tracking-[.35em] text-bronze mb-3">
+                {post.type === 'reel' ? 'REEL' : 'POST'} · {SITE.instagramHandle.toUpperCase()}
+              </p>
+              <InstagramEmbed permalink={post.permalink} caption={post.caption} />
+              <a
+                href={post.permalink}
+                target="_blank"
+                rel="noreferrer"
+                className="link-lux inline-block mt-3 text-[.55rem] tracking-[.25em] text-cream/45"
+              >
+                OPEN ON INSTAGRAM
+              </a>
+            </div>
           ))}
         </div>
       </div>

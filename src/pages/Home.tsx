@@ -60,8 +60,8 @@ export function Home() {
           </div>
           <div className="zoom-img rounded-sm border border-cream/10 h-[50vh]" data-reveal data-delay="0.15">
             <img
-              src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1600&auto=format&fit=crop"
-              alt="DRIP dining room"
+              src="https://images.deliveryhero.io/image/global-menu-service/FP_PK/vendor/gvi4/product/100952841/bf60eada-41ba-48a6-ba37-fa508a4b3daf.jpg?width=1600&height=1200"
+              alt="DRIP Parmesan Crusted Chicken Sandwich"
               className="w-full h-full object-cover"
               loading="lazy"
             />

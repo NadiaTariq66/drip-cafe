@@ -17,8 +17,8 @@ export function MenuHighlights() {
             </h2>
           </div>
           <p className="max-w-sm text-cream/55 leading-relaxed mt-6 md:mt-0" data-reveal>
-            Spanish Latte, Cortado, Tiramisu Latte, crunchy wraps and morning pastry — the hits
-            guests keep coming back for.
+            Tiramisu Latte (#1), Creamy Mushroom Omelette, Butter Croissant, Spanish Latte — the
+            same hits listed on Foodpanda.
           </p>
         </div>
 

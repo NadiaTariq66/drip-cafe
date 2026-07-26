@@ -27,7 +27,7 @@ export function Visit() {
           >
             <div className="zoom-img h-72 md:h-80 relative">
               <img
-                src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1600&auto=format&fit=crop"
+                src="https://images.deliveryhero.io/image/global-menu-service/FP_PK/vendor/gvi4/product/9a00f459-c2f9-426c-84ca-a8abc257689d.jpg?width=1600&height=1200"
                 alt="DRIP Gulberg"
                 className="w-full h-full object-cover"
               />
