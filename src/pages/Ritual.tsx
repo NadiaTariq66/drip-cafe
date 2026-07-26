@@ -7,12 +7,15 @@ import {
   SITE,
 } from '../data/content'
 import { createRitual, fetchPulse, joinWaitlist, whatsappLink } from '../lib/api'
+import { useAuth } from '../context/AuthContext'
+import { completeOrderStamp } from '../lib/passportApi'
 import type { CafePulse } from '../lib/types'
 import { useReveal } from '../hooks/useReveal'
 
 type Mode = 'ritual' | 'waitlist'
 
 export function Ritual() {
+  const { profile } = useAuth()
   const [mode, setMode] = useState<Mode>('ritual')
   const [mood, setMood] = useState('slow')
   const [step, setStep] = useState(1)
@@ -50,8 +53,21 @@ export function Ritual() {
         pickup_time,
         notes,
       })
+      if (profile) {
+        try {
+          await completeOrderStamp(profile.id, {
+            drink: pick.drink,
+            pastry: pick.pastry,
+            fromRitual: true,
+          })
+        } catch {
+          /* passport stamp is best-effort */
+        }
+      }
       setDone(
-        `${pick.drink} + ${pick.pastry} queued for ${name}. Bar ticket auto-printed — ready in ~12 minutes.`,
+        `${pick.drink} + ${pick.pastry} queued for ${name}. Bar ticket auto-printed — ready in ~12 minutes.${
+          profile ? ' A seal was inked in your Drip Passport.' : ''
+        }`,
       )
       setStep(3)
     } finally {

@@ -54,11 +54,11 @@ export function PulseBanner() {
             Avg wait ~{pulse.avg_wait_minutes} min · People typically spend 10 min to 1.5 hr
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Link to="/ritual" className="btn-primary magnetic px-6 py-3 text-[.58rem] font-medium">
-              START RITUAL
+            <Link to="/passport" className="btn-primary magnetic px-6 py-3 text-[.58rem] font-medium">
+              OPEN PASSPORT
             </Link>
-            <Link to="/automation" className="btn-ghost magnetic px-6 py-3 text-[.58rem]">
-              STAFF PULSE DESK
+            <Link to="/ritual" className="btn-ghost magnetic px-6 py-3 text-[.58rem]">
+              START RITUAL
             </Link>
           </div>
         </div>

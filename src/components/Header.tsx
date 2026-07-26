@@ -9,6 +9,7 @@ const links = [
   { to: '/menu', label: 'MENU' },
   { to: '/gallery', label: 'GALLERY' },
   { to: '/ritual', label: 'RITUAL' },
+  { to: '/passport', label: 'PASSPORT' },
   { to: '/visit', label: 'VISIT' },
 ]
 
@@ -131,9 +132,10 @@ export function Header() {
             { to: '/menu', n: '02', label: 'Menu' },
             { to: '/gallery', n: '03', label: 'Gallery' },
             { to: '/ritual', n: '04', label: 'Ritual' },
-            { to: '/visit', n: '05', label: 'Visit' },
-            { to: '/reserve', n: '06', label: 'Reserve' },
-            { to: '/automation', n: '07', label: 'Pulse Desk' },
+            { to: '/passport', n: '05', label: 'Passport' },
+            { to: '/visit', n: '06', label: 'Visit' },
+            { to: '/reserve', n: '07', label: 'Reserve' },
+            { to: '/automation', n: '08', label: 'Pulse Desk' },
           ].map((item) => (
             <li key={item.to} className="overflow-hidden">
               <Link
