@@ -136,8 +136,9 @@ export function Header() {
             { to: '/journal', n: '06', label: 'Journal' },
             { to: '/ritual', n: '07', label: 'Ritual' },
             { to: '/visit', n: '08', label: 'Visit' },
-            { to: '/reserve', n: '09', label: 'Reserve' },
-            { to: '/automation', n: '10', label: 'Pulse Desk' },
+            { to: '/tables', n: '09', label: 'Tables' },
+            { to: '/reserve', n: '10', label: 'Reserve' },
+            { to: '/automation', n: '11', label: 'Pulse Desk' },
           ].map((item) => (
             <li key={item.to} className="overflow-hidden">
               <Link

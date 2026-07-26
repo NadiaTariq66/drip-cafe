@@ -13,6 +13,8 @@ import { Personality } from './pages/Personality'
 import { Reserve } from './pages/Reserve'
 import { Ritual } from './pages/Ritual'
 import { Secret } from './pages/Secret'
+import { Table } from './pages/Table'
+import { TablesDesk } from './pages/TablesDesk'
 import { Visit } from './pages/Visit'
 
 export default function App() {
@@ -32,6 +34,8 @@ export default function App() {
           <Route path="journal" element={<Journal />} />
           <Route path="concierge" element={<Concierge />} />
           <Route path="secret" element={<Secret />} />
+          <Route path="table/:tableCode" element={<Table />} />
+          <Route path="tables" element={<TablesDesk />} />
           <Route path="admin/passport" element={<PassportAdmin />} />
           <Route path="automation" element={<Automation />} />
           <Route path="*" element={<Navigate to="/" replace />} />

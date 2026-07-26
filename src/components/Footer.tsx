@@ -81,6 +81,16 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link to="/table/G12" className="link-lux" data-hover>
+                  Digital Coffee Table
+                </Link>
+              </li>
+              <li>
+                <Link to="/tables" className="link-lux" data-hover>
+                  Table Desk (Staff)
+                </Link>
+              </li>
+              <li>
                 <Link to="/gallery" className="link-lux" data-hover>
                   Gallery
                 </Link>

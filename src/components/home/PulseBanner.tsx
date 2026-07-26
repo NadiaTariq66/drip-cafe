@@ -60,8 +60,8 @@ export function PulseBanner() {
             >
               COFFEE PERSONALITY
             </Link>
-            <Link to="/passport" className="btn-ghost magnetic px-6 py-3 text-[.58rem]">
-              OPEN PASSPORT
+            <Link to="/table/G12" className="btn-ghost magnetic px-6 py-3 text-[.58rem]">
+              TRY TABLE QR
             </Link>
           </div>
         </div>
