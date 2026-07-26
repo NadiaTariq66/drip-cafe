@@ -7,7 +7,7 @@ import { SITE } from '../data/content'
 const links = [
   { to: '/about', label: 'ABOUT' },
   { to: '/menu', label: 'MENU' },
-  { to: '/gallery', label: 'GALLERY' },
+  { to: '/personality', label: 'PERSONALITY' },
   { to: '/ritual', label: 'RITUAL' },
   { to: '/passport', label: 'PASSPORT' },
   { to: '/visit', label: 'VISIT' },
@@ -130,12 +130,13 @@ export function Header() {
           {[
             { to: '/about', n: '01', label: 'About' },
             { to: '/menu', n: '02', label: 'Menu' },
-            { to: '/gallery', n: '03', label: 'Gallery' },
-            { to: '/ritual', n: '04', label: 'Ritual' },
-            { to: '/passport', n: '05', label: 'Passport' },
-            { to: '/visit', n: '06', label: 'Visit' },
-            { to: '/reserve', n: '07', label: 'Reserve' },
-            { to: '/automation', n: '08', label: 'Pulse Desk' },
+            { to: '/personality', n: '03', label: 'Personality' },
+            { to: '/gallery', n: '04', label: 'Gallery' },
+            { to: '/ritual', n: '05', label: 'Ritual' },
+            { to: '/passport', n: '06', label: 'Passport' },
+            { to: '/visit', n: '07', label: 'Visit' },
+            { to: '/reserve', n: '08', label: 'Reserve' },
+            { to: '/automation', n: '09', label: 'Pulse Desk' },
           ].map((item) => (
             <li key={item.to} className="overflow-hidden">
               <Link

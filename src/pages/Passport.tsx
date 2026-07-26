@@ -1,7 +1,8 @@
-import { useCallback, useEffect, useState, type FormEvent } from 'react'
+import { useCallback, useEffect, useMemo, useState, type FormEvent } from 'react'
 import { Link } from 'react-router-dom'
 import gsap from 'gsap'
 import { AchievementGrid } from '../components/passport/AchievementGrid'
+import { JourneyTrail } from '../components/passport/JourneyTrail'
 import { PassportAuth } from '../components/passport/PassportAuth'
 import { PassportBook } from '../components/passport/PassportBook'
 import { RewardTimeline } from '../components/passport/RewardTimeline'
@@ -11,6 +12,7 @@ import {
   fetchPassportBundle,
   verifyVisit,
 } from '../lib/passportApi'
+import { buildJourney } from '../lib/passportJourney'
 import type { PassportBundle } from '../lib/passportTypes'
 import { useReveal } from '../hooks/useReveal'
 
@@ -46,6 +48,11 @@ export function Passport() {
     const t = setTimeout(() => setToast(''), 4200)
     return () => clearTimeout(t)
   }, [toast])
+
+  const journey = useMemo(
+    () => (bundle ? buildJourney(bundle.stamps) : []),
+    [bundle],
+  )
 
   async function afterEarn(result: Awaited<ReturnType<typeof completeOrderStamp>>) {
     setNewStampIds(result.stamps.map((s) => s.id))
@@ -149,6 +156,8 @@ export function Passport() {
         </div>
 
         <PassportBook profile={profile} stamps={bundle.stamps} animateNewIds={newStampIds} />
+
+        <JourneyTrail steps={journey} />
 
         <div className="mt-16 grid lg:grid-cols-2 gap-10">
           <section>

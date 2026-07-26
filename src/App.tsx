@@ -7,6 +7,7 @@ import { Home } from './pages/Home'
 import { Menu } from './pages/Menu'
 import { Passport } from './pages/Passport'
 import { PassportAdmin } from './pages/PassportAdmin'
+import { Personality } from './pages/Personality'
 import { Reserve } from './pages/Reserve'
 import { Ritual } from './pages/Ritual'
 import { Visit } from './pages/Visit'
@@ -24,6 +25,7 @@ export default function App() {
           <Route path="reserve" element={<Reserve />} />
           <Route path="ritual" element={<Ritual />} />
           <Route path="passport" element={<Passport />} />
+          <Route path="personality" element={<Personality />} />
           <Route path="admin/passport" element={<PassportAdmin />} />
           <Route path="automation" element={<Automation />} />
           <Route path="*" element={<Navigate to="/" replace />} />
