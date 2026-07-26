@@ -12,6 +12,7 @@ import {
   fetchPassportBundle,
   verifyVisit,
 } from '../lib/passportApi'
+import { publishCommunityEvent } from '../lib/communityWall'
 import { buildJourney } from '../lib/passportJourney'
 import type { PassportBundle } from '../lib/passportTypes'
 import { useReveal } from '../hooks/useReveal'
@@ -61,7 +62,26 @@ export function Passport() {
     await load()
     const bits = [`+${result.stamps.length} seal inked`]
     if (result.newAchievementIds.length) bits.push('achievement unlocked')
-    if (result.newRewardIds.length) bits.push('corridor opened')
+    if (result.newRewardIds.length) {
+      bits.push('corridor opened')
+      const reward = bundle?.rewards.find((r) => result.newRewardIds.includes(r.id))
+      await publishCommunityEvent({
+        kind: 'passport',
+        title: 'A customer unlocked',
+        detail: reward?.title || 'Gold Passport',
+      })
+    }
+    const stampLabel = result.stamps[0]?.label
+    if (stampLabel) {
+      await publishCommunityEvent({
+        kind: result.stamps[0]?.rule_key === 'visit_verified' ? 'visit' : 'order',
+        title:
+          result.stamps[0]?.rule_key === 'visit_verified'
+            ? 'A table was verified'
+            : 'Someone just ordered',
+        detail: stampLabel,
+      })
+    }
     setToast(bits.join(' · '))
   }
 

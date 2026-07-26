@@ -4,6 +4,7 @@ import { CustomCursor } from './CustomCursor'
 import { Footer } from './Footer'
 import { Header } from './Header'
 import { Preloader } from './Preloader'
+import { SecretBeans } from './SecretBeans'
 import { SvgDefs } from './SvgDefs'
 import { useLenis } from '../hooks/useLenis'
 import { useMagnetic } from '../hooks/useMagnetic'
@@ -38,6 +39,7 @@ export function Layout() {
       {booted && (
         <>
           <Header />
+          <SecretBeans />
           <main key={location.pathname} className="page-enter">
             <Outlet />
           </main>

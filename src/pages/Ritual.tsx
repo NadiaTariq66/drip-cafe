@@ -8,6 +8,7 @@ import {
 } from '../data/content'
 import { createRitual, fetchPulse, joinWaitlist, whatsappLink } from '../lib/api'
 import { useAuth } from '../context/AuthContext'
+import { publishCommunityEvent } from '../lib/communityWall'
 import { completeOrderStamp } from '../lib/passportApi'
 import type { CafePulse } from '../lib/types'
 import { useReveal } from '../hooks/useReveal'
@@ -52,6 +53,11 @@ export function Ritual() {
         pastry: pick.pastry,
         pickup_time,
         notes,
+      })
+      await publishCommunityEvent({
+        kind: 'order',
+        title: 'Someone just ordered',
+        detail: `${pick.drink}${pick.pastry ? ` · ${pick.pastry}` : ''}`,
       })
       if (profile) {
         try {

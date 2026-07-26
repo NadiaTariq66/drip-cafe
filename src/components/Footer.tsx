@@ -66,6 +66,16 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link to="/concierge" className="link-lux" data-hover>
+                  Coffee Concierge
+                </Link>
+              </li>
+              <li>
+                <Link to="/journal" className="link-lux" data-hover>
+                  Coffee Journal
+                </Link>
+              </li>
+              <li>
                 <Link to="/passport" className="link-lux" data-hover>
                   Drip Passport
                 </Link>

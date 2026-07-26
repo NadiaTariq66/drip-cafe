@@ -5,11 +5,11 @@ import { getLenis } from '../hooks/useLenis'
 import { SITE } from '../data/content'
 
 const links = [
-  { to: '/about', label: 'ABOUT' },
   { to: '/menu', label: 'MENU' },
   { to: '/personality', label: 'PERSONALITY' },
-  { to: '/ritual', label: 'RITUAL' },
+  { to: '/concierge', label: 'CONCIERGE' },
   { to: '/passport', label: 'PASSPORT' },
+  { to: '/journal', label: 'JOURNAL' },
   { to: '/visit', label: 'VISIT' },
 ]
 
@@ -131,12 +131,13 @@ export function Header() {
             { to: '/about', n: '01', label: 'About' },
             { to: '/menu', n: '02', label: 'Menu' },
             { to: '/personality', n: '03', label: 'Personality' },
-            { to: '/gallery', n: '04', label: 'Gallery' },
-            { to: '/ritual', n: '05', label: 'Ritual' },
-            { to: '/passport', n: '06', label: 'Passport' },
-            { to: '/visit', n: '07', label: 'Visit' },
-            { to: '/reserve', n: '08', label: 'Reserve' },
-            { to: '/automation', n: '09', label: 'Pulse Desk' },
+            { to: '/concierge', n: '04', label: 'Concierge' },
+            { to: '/passport', n: '05', label: 'Passport' },
+            { to: '/journal', n: '06', label: 'Journal' },
+            { to: '/ritual', n: '07', label: 'Ritual' },
+            { to: '/visit', n: '08', label: 'Visit' },
+            { to: '/reserve', n: '09', label: 'Reserve' },
+            { to: '/automation', n: '10', label: 'Pulse Desk' },
           ].map((item) => (
             <li key={item.to} className="overflow-hidden">
               <Link

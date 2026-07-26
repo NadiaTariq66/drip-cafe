@@ -1,12 +1,14 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { AboutTeaser } from '../components/home/AboutTeaser'
+import { CommunityWall } from '../components/home/CommunityWall'
 import { Hero } from '../components/home/Hero'
 import { InstagramStrip } from '../components/home/InstagramStrip'
 import { Marquee } from '../components/home/Marquee'
 import { MenuHighlights } from '../components/home/MenuHighlights'
 import { PulseBanner } from '../components/home/PulseBanner'
 import { Reviews } from '../components/home/Reviews'
+import { WeatherEngine } from '../components/home/WeatherEngine'
 import { useReveal } from '../hooks/useReveal'
 import { SITE } from '../data/content'
 
@@ -21,9 +23,11 @@ export function Home() {
     <>
       <Hero playIntro />
       <Marquee />
+      <WeatherEngine />
       <PulseBanner />
       <AboutTeaser />
       <MenuHighlights />
+      <CommunityWall />
       <Reviews />
       <InstagramStrip />
 
